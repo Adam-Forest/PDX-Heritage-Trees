@@ -1,6 +1,6 @@
-var greenIcon = new L.Icon({
-  iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
-  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+var treeIcon = new L.Icon({
+  iconUrl: './static/images/marker-icon-2x-tree.png',
+  shadowUrl: './static/images/marker-shadow.png',
   iconSize: [25, 41],
   iconAnchor: [12, 41],
   popupAnchor: [1, -34],
@@ -54,7 +54,7 @@ d3.json(url, function (response) {
 
   markers.addLayer(L.geoJson(response, {
     pointToLayer: function (feature, latlng) {
-              return L.marker(latlng, {icon: greenIcon});
+              return L.marker(latlng, {icon: treeIcon});
       },
     onEachFeature: function (feature, layer) {
       layer.bindPopup(`<h1>${feature.properties.COMMON}</h1><h1>${feature.properties.SCIENTIFIC}</h1><h2>${feature.properties.NOTES}</h2>`);
