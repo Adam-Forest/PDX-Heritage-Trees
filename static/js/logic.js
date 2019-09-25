@@ -1,6 +1,6 @@
 var treeIcon = new L.Icon({
   iconUrl: './static/images/marker-icon-2x-tree.png',
-  shadowUrl: './static/images/marker-shadow.png?ver=2',
+  shadowUrl: './static/images/marker-shadow.png',
   iconSize: [25, 41],
   iconAnchor: [12, 41],
   popupAnchor: [1, -34],
