@@ -63,7 +63,9 @@ d3.json(url, function (response) {
 
   myMap.locate({setView: true, maxZoom: 16});
   myMap.addLayer(markers);
+  
 
   L.control.layers(baseMaps).addTo(myMap);
+  L.control.locate().addTo(myMap);
 });
 
