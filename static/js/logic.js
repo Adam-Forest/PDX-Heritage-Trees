@@ -8,12 +8,14 @@ var treeIcon = new L.Icon({
 });
 
 // Adding tile layer to the map
-var streets = L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
+var streets = L.tileLayer("https://api.mapbox.com/styles/adamforest/clalo9zsg000215nxwvqdalcc?access_token={accessToken}", {
   attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
   maxZoom: 18,
+  tileSize: 512,
   id: "mapbox.streets",
   accessToken: API_KEY
 });
+
 
 var light = L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
   attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
@@ -30,9 +32,7 @@ var pirate = L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?a
 });
 
 var baseMaps = {
-  Streets: streets,
-  Light: light,
-  Pirate: pirate
+  Streets: streets
 };
 
 // Creating map object
