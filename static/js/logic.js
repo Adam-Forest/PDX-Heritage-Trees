@@ -43,6 +43,13 @@ var myMap = L.map("map", {
   layers: streets
 });
 
+L.tileLayer("https://api.mapbox.com/styles/v1/adamforest/clalo9zsg000215nxwvqdalcc.html?title=view&access_token={accessToken}", {
+  attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
+  maxZoom: 18,
+  tileSize: 512,
+  id: "mapbox.streets",
+  accessToken: API_KEY
+}).addTo(myMap);
 
 var url = "https://opendata.arcgis.com/datasets/fd1d618ac3174ad5be730524a4dd778e_26.geojson"
 // Grab data with d3
