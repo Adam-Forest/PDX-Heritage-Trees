@@ -9,11 +9,11 @@ var treeIcon = new L.Icon({
 
 // Adding tile layer to the map
 
-var streets = L.tileLayer("https://api.mapbox.com/styles/v1/adamforest/clalo9zsg000215nxwvqdalcc.html?title=view&access_token={accessToken}", {
+var streets = L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?title=view&access_token={accessToken}", {
   attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
   maxZoom: 18,
   tileSize: 512,
-  id: "mapbox.streets",
+  id: "mapbox/streets-v11",
   accessToken: API_KEY
 });
 
